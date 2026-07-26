@@ -1,0 +1,9 @@
+{
+  "name": "Desk-AI",
+  "description": "A cross-platform, real-time AI work assistant.",
+  "requestFramePermissions": [
+    "microphone",
+    "camera",
+    "display"
+  ]
+}
