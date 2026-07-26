@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desk-AI Assistant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            lime: {
+              DEFAULT: '#B4FF00',
+              glow: 'rgba(180, 255, 0, 0.2)'
+            },
+            panel: {
+              bg: '#111111',
+              border: 'rgba(255,255,255,0.1)'
+            },
+            gray: {
+              850: '#1f2937',
+              900: '#111827',
+              950: '#030712',
+            }
+          }
+        }
+      }
+    }
+  </script>
+    <style>
+    body {
+      background-color: #000000;
+      color: #FFFFFF;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #1A1A1D;
+      border-radius: 10px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #2C2C2E;
+    }
+
+    /* Eburon Pro Bottom Bar Styles */
+    .wing {
+      flex-grow: 1; 
+      height: 60px;
+      position: relative; 
+      z-index: 1;
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+    .left-wing {
+      margin-right: -40px;
+      background: linear-gradient(65deg, 
+        #1A1A1C 0%, #1A1A1C 35%, 
+        #FFFFFF 35%, #FFFFFF 36.5%, 
+        #B4FF00 36.5%, #B4FF00 48%, 
+        #FFFFFF 48%, #FFFFFF 49.5%, 
+        #1A1A1C 49.5%, #1A1A1C 100%);
+    }
+    .right-wing {
+      margin-left: -40px;
+      background: linear-gradient(-65deg, 
+        #1A1A1C 0%, #1A1A1C 35%, 
+        #FFFFFF 35%, #FFFFFF 36.5%, 
+        #B4FF00 36.5%, #B4FF00 48%, 
+        #FFFFFF 48%, #FFFFFF 49.5%, 
+        #1A1A1C 49.5%, #1A1A1C 100%);
+    }
+    .center-console {
+      width: 75%; 
+      max-width: 900px; 
+      height: 85px;
+      background: #111111;
+      border: 2px solid #B4FF00;
+      border-bottom: none;
+      border-radius: 40px 40px 0 0;
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      gap: 8px;
+      position: relative; 
+      z-index: 2;
+      box-shadow: 0 -4px 20px rgba(180, 255, 0, 0.2);
+      padding: 0 20px;
+    }
+    .nav-item {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      background: transparent; border: none; color: #FFF;
+      padding: 0 12px; height: 100%; cursor: pointer; transition: 0.2s;
+      position: relative;
+    }
+    .nav-item:hover { background: rgba(255,255,255,0.05); border-radius: 12px; }
+    .icon-wrapper {
+      position: relative; display: flex; align-items: center; justify-content: center;
+      margin-bottom: 6px;
+    }
+    .icon-wrapper svg:first-child { width: 24px; height: 24px; stroke: currentColor; fill: none; stroke-width: 1.5; stroke-linecap: round; }
+    .chevron { position: absolute; top: -2px; right: -12px; width: 10px; height: 10px; stroke: #888888; stroke-width: 2.5; fill: none; }
+    .nav-item span { font-size: 11px; font-weight: 500; }
+    .badge {
+      position: absolute; top: -6px; right: -8px; background: #B4FF00;
+      color: #000; font-size: 10px; font-weight: 800; padding: 2px 5px; border-radius: 10px; line-height: 1;
+    }
+    .btn-green-box .icon-wrapper svg:first-child {
+      background: #B4FF00; stroke: #000; border-radius: 6px; padding: 3px; stroke-width: 2;
+    }
+    .divider { width: 1px; height: 35px; background: rgba(255,255,255,0.1); margin: 0 10px; }
+  </style>
+</head>
+<body class="overflow-hidden font-sans antialiased">
+  <div id="root" class="w-full h-screen"></div>
+  <script type="module" src="./index.tsx"></script>
+<script type="module" src="/index.js"></script></body>
+</html>
